@@ -1,0 +1,9 @@
+---
+- hosts: PIS 
+  remote_user: pi
+  tasks:
+    - name: upgrade
+      apt: 
+        upgrade: full
+      sudo: true
+

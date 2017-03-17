@@ -1,0 +1,14 @@
+---
+## set variables at command line
+## ansible-playbook --extra-vars "var=something" playbook.yml
+
+- hosts: PIZ 
+  vars:
+  remote_user: pi
+  tasks:
+    - name: install package
+      apt: 
+        name: "{{ app }}" 
+        state: present
+      sudo: true
+

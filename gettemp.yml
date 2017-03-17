@@ -1,0 +1,11 @@
+---
+- name: Transfer and execute a script.
+  hosts: all
+  user: pi 
+  sudo: yes
+  tasks:
+     - name: Get temps
+       script: pi-temp.sh
+       register: out
+
+     - debug: var=out.stdout_lines

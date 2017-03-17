@@ -1,0 +1,12 @@
+---
+# Example from Ansible Playbooks
+- hosts: all
+  remote_user: pi
+  tasks:
+    - name: file
+      copy:
+        src: /home/pi/.vimrc
+        dest: /home/pi/.vimrc
+        owner: pi
+        group: pi
+        mode: 0644

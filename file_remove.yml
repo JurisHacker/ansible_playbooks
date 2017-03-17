@@ -1,0 +1,9 @@
+---
+# Example from Ansible Playbooks
+- hosts: all
+  remote_user: pi
+  tasks:
+    - name: remove file
+      file:
+        path: /home/pi/,vimrc
+        state: absent 
